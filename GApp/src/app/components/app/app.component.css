@@ -1,0 +1,9 @@
+shared-header {
+    display: block;
+}
+shared-footer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
