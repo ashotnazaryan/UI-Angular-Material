@@ -1,4 +1,13 @@
-<div class="app-container">
+
+<md-sidenav-container class="app-container">
+  <md-sidenav #sidenav class="sidenav">
+    User
+  </md-sidenav>
+
+  <div class="main-container">
+    <button md-icon-button (click)="sidenav.open()" class="sidenav-button button default"c><md-icon>menu</md-icon></button>
     <shared-header></shared-header>
     <shared-footer></shared-footer>
-</div>
+  </div>
+
+</md-sidenav-container>

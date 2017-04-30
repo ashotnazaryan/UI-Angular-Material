@@ -1,0 +1,12 @@
+@import '../../app/app.component.scss';
+
+.header-container {
+    height: 40px;
+    padding: 0 0 0 50px;
+    border-bottom: 1px solid $gappGreen;
+    background-color: rgba($gappGreen, 0.4);
+    box-shadow: 0 3px 10px $gappGreen;
+    .gapp-button {
+        height: 40px;
+    }
+}

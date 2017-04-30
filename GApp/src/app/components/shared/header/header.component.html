@@ -1,5 +1,7 @@
-<button md-raised-button color="accent" [mdMenuTriggerFor]="menu">Menu</button>
-<md-menu #menu="mdMenu" [overlapTrigger]="false">
-  <button md-menu-item>Item 1</button>
-  <button md-menu-item>Item 2</button>
-</md-menu>
+<div class="header-container">
+  <button md-button class="gapp-button primary" [mdMenuTriggerFor]="menu">Menu</button>
+  <md-menu #menu="mdMenu" [overlapTrigger]="false">
+    <button md-menu-item>Item 1</button>
+    <button md-menu-item>Item 2</button>
+  </md-menu>
+</div>

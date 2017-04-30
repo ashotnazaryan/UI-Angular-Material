@@ -1,14 +1,33 @@
 @import '../../../assets/global/variables.scss';
 
 .app-container {
-    min-height: 100vh;
-    shared-header {
-        display: block;
+    //min-height: 100vh;
+
+    .main-container {
+        min-height: 100vh;
+        height: 100%;
+        .sidenav-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        shared-header {
+            display: block;
+        }
+        shared-footer {
+            display: block;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
     }
-    shared-footer {
-        display: block;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
+    .gapp-button {
+        &.primary {
+            background-color: $gappGreen;
+            &:hover {
+                background-color: $gappGreen;
+            }
+        }
     }
+    
 }

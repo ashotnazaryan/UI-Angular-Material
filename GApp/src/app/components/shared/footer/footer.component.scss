@@ -1,0 +1,11 @@
+@import '../../app/app.component.scss';
+
+.footer-container {
+    background-color: rgba($gappGreen, 0.7);
+    p {
+        margin: 0;
+        text-align: center;
+        color: $white;
+        padding: 0.5em 0;
+    }
+}
