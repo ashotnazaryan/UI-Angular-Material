@@ -1,8 +1,12 @@
 @import '../../../assets/global/variables.scss';
+//@import '../../../assets/fonts/font.css';
 
 .app-container {
     //min-height: 100vh;
-
+    .sidenav {
+        width: 300px;
+        background-color: $gappWhite;
+    }
     .main-container {
         min-height: 100vh;
         height: 100%;

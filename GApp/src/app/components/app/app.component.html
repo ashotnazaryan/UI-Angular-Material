@@ -1,9 +1,8 @@
 
 <md-sidenav-container class="app-container">
   <md-sidenav #sidenav class="sidenav">
-    User
+    <shared-navmenu></shared-navmenu>
   </md-sidenav>
-
   <div class="main-container">
     <button md-icon-button (click)="sidenav.open()" class="sidenav-button button default">
       <md-icon>menu</md-icon>
@@ -12,5 +11,4 @@
     <router-outlet></router-outlet>
     <shared-footer></shared-footer>
   </div>
-
 </md-sidenav-container>

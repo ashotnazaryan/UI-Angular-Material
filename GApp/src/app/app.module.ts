@@ -3,8 +3,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { AppRoutingModule } from './app.routing.module';
+
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavmenuComponent } from './components/shared/navmenu/navmenu.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
@@ -13,6 +15,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     declarations: [
         AppComponent,
         HomeComponent,
+        NavmenuComponent,
         HeaderComponent,
         FooterComponent
     ],
