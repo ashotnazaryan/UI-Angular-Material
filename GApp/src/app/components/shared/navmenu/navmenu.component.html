@@ -19,7 +19,8 @@
             <p>{{user.about}}</p>
         </md-card-content>
          <md-card-actions>
-            <button md-icon-button [routerLink]="['/login']"><md-icon class="md-24">power_settings_new</md-icon>
+            <button md-icon-button [routerLink]="['/login']" (click)="sidenav.close()">
+            <md-icon class="md-24">power_settings_new</md-icon>
                 Logout
             </button>
         </md-card-actions>

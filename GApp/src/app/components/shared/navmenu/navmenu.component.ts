@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'shared-navmenu',
@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class NavmenuComponent {
+    @Input() sidenav: any;
     user: Object;
     constructor(){
+        
         this.user = {
             firstName: "Ashot",
             lastName: "Nazaryan",

@@ -1,7 +1,7 @@
 
 <md-sidenav-container class="app-container">
   <md-sidenav #sidenav class="sidenav">
-    <shared-navmenu></shared-navmenu>
+    <shared-navmenu [sidenav]="sidenav"></shared-navmenu>
   </md-sidenav>
   <button md-icon-button (click)="sidenav.open()" class="sidenav-button">
       <md-icon>menu</md-icon>
