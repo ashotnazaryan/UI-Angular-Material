@@ -4,4 +4,13 @@
     height: 100%;
     padding: 10px;
     box-sizing: border-box;
+    .card {
+        .avatar {
+            background-image: url('../../../../assets/img/1.jpg');
+            background-size: cover;
+            img {
+
+            }
+        }
+    }
 }

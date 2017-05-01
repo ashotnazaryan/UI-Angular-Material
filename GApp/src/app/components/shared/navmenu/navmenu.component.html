@@ -1,4 +1,26 @@
 <div class="navmenu-container">
-    <span>User: Ashot Nazaryan</span>
-    <button md-fab [routerLink]="['/login']"><md-icon>power_settings_new</md-icon></button>
+    <md-card class="card">
+        <md-card-header>
+            <div md-card-avatar class="avatar">
+                <!--<img md-card-image src="assets/img/1.jpg">-->
+            </div>
+            <md-card-title>
+                <md-icon>perm_contact_calendar</md-icon>
+                <span>{{user.firstName}} {{user.lastName}}</span>
+            </md-card-title>
+            <md-card-subtitle>
+                <md-icon>room</md-icon>
+                <span>{{user.location}}</span>
+            </md-card-subtitle>
+        </md-card-header>
+        
+        <md-card-content>
+            <p>{{user.about}}</p>
+        </md-card-content>
+         <md-card-actions>
+            <button md-icon-button [routerLink]="['/login']"><md-icon>power_settings_new</md-icon>
+                Logout
+            </button>
+        </md-card-actions>
+    </md-card>
 </div>

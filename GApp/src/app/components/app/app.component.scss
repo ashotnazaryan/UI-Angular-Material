@@ -27,9 +27,9 @@
     }
     .gapp-button {
         &.primary {
-            background-color: $gappGreen;
+            background-color: $gappSuccess;
             &:hover {
-                background-color: $gappGreen;
+                background-color: $gappSuccess;
             }
         }
     }

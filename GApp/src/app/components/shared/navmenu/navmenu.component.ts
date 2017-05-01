@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class NavmenuComponent {
-
+    user: Object;
+    constructor(){
+        this.user = {
+            firstName: "Ashot",
+            lastName: "Nazaryan",
+            location: "Yerevan",
+            about: "tra la la"
+        }
+    }
 }
