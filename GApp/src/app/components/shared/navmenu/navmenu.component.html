@@ -6,7 +6,8 @@
             </div>
             <md-card-title>
                 <md-icon>perm_contact_calendar</md-icon>
-                <span>{{user.firstName}} {{user.lastName}}</span>
+                <span>{{user.firstName}}</span>
+                <span>{{user.lastName}}</span>
             </md-card-title>
             <md-card-subtitle>
                 <md-icon>room</md-icon>
@@ -18,7 +19,7 @@
             <p>{{user.about}}</p>
         </md-card-content>
          <md-card-actions>
-            <button md-icon-button [routerLink]="['/login']"><md-icon>power_settings_new</md-icon>
+            <button md-icon-button [routerLink]="['/login']"><md-icon class="md-24">power_settings_new</md-icon>
                 Logout
             </button>
         </md-card-actions>

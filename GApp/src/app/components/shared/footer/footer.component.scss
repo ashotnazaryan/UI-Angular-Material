@@ -1,11 +1,15 @@
 @import '../../app/app.component.scss';
 
 .footer-container {
-    background-color: rgba($gappSuccess, 0.7);
+    background-color: $gappSuccess;
     p {
         margin: 0;
         text-align: center;
         color: $gappWhite;
         padding: 0.5em 0;
+        md-icon {
+            position: relative;
+            top: 5px;
+        }
     }
 }

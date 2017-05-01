@@ -1,37 +1,66 @@
 @import '../../../assets/global/variables.scss';
 //@import '../../../assets/fonts/font.css';
 
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .app-container {
     //min-height: 100vh;
     .sidenav {
         width: 300px;
         background-color: $gappWhite;
     }
+    .sidenav-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    shared-header {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    shared-footer {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
     .main-container {
         min-height: 100vh;
         height: 100%;
-        .sidenav-button {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        shared-header {
-            display: block;
-        }
-        shared-footer {
-            display: block;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+        padding: 40px 0;
+        box-sizing: border-box;
+    }
+}
+.gapp-button {
+    &.primary {
+        background-color: $gappPrimary !important;
+        color: $gappWhite;
+    }
+    &.success {
+        background-color: $gappSuccess !important;
+        color: $gappWhite;
+    }
+    &.warning {
+        color: $gappDanger;
+        &:hover {
+            background-color: $gappWarning;
         }
     }
-    .gapp-button {
-        &.primary {
-            background-color: $gappSuccess;
-            &:hover {
-                background-color: $gappSuccess;
-            }
+    &.default {
+        color: $gappBlack;
+        &:hover {
+            background-color: $gappDefault;
         }
     }
-    
+}
+.right {
+    float: right;
 }

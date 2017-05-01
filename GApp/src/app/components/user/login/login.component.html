@@ -1,22 +1,28 @@
 <div class="login-container">
     <div class="login-form">
-        <md-toolbar color="primary" class="login-header">
+        <md-toolbar class="login-header">
             <i class="material-icons">lock_outline</i>
             <span>Login</span>
         </md-toolbar>
         <md-card-content>
             <form class="form">
                 <md-input-container class="full-width">
-                    <input mdInput placeholder="Username">
+                    <input mdInput>
+                    <md-placeholder>
+                        <md-icon>email</md-icon> Username
+                    </md-placeholder>
                 </md-input-container>
                 <md-input-container class="full-width">
-                    <input mdInput placeholder="Password">
+                    <input mdInput type="password" >
+                    <md-placeholder>
+                        <md-icon>lock</md-icon> Password
+                    </md-placeholder>
                 </md-input-container>
-                <a md-raised-button color="primary">Log In</a>
-                <a md-button class="right">Cancel</a>
+                <a md-raised-button class="gapp-button primary">Log In</a>
+                <a md-button class="gapp-button default right">Cancel</a>
                 <div class="additional">
-                    <a md-button color="warn">Forgot Password ?</a>
-                    <a md-raised-button color="accent" class="right">Sign Up</a>
+                    <a md-button class="gapp-button warning">Forgot Password ?</a>
+                    <a md-raised-button class="gapp-button success right">Sign Up</a>
                 </div>
             </form>
         </md-card-content>

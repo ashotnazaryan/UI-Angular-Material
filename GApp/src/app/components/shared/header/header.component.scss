@@ -4,9 +4,9 @@
     height: 40px;
     padding: 0 0 0 50px;
     border-bottom: 1px solid $gappSuccess;
-    background-color: rgba($gappSuccess, 0.4);
-    box-shadow: 0 3px 10px $gappSuccess;
-    .gapp-button {
+    background-color: $gappSuccess;
+    box-shadow: 0 1px 10px $gappSuccess;
+    button {
         height: 40px;
     }
 }

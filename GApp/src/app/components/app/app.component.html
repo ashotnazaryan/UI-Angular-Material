@@ -3,12 +3,12 @@
   <md-sidenav #sidenav class="sidenav">
     <shared-navmenu></shared-navmenu>
   </md-sidenav>
-  <div class="main-container">
-    <button md-icon-button (click)="sidenav.open()" class="sidenav-button button default">
+  <button md-icon-button (click)="sidenav.open()" class="sidenav-button">
       <md-icon>menu</md-icon>
-    </button>
-    <shared-header></shared-header>
+  </button>
+  <shared-header></shared-header>
+  <div class="main-container">
     <router-outlet></router-outlet>
-    <shared-footer></shared-footer>
   </div>
+  <shared-footer></shared-footer>
 </md-sidenav-container>
