@@ -5,6 +5,7 @@ import 'hammerjs';
 import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './components/app/app.component';
+import { LoginComponent } from './components/user/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavmenuComponent } from './components/shared/navmenu/navmenu.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -14,6 +15,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     bootstrap: [AppComponent],
     declarations: [
         AppComponent,
+        LoginComponent,
         HomeComponent,
         NavmenuComponent,
         HeaderComponent,

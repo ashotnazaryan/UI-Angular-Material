@@ -1,0 +1,56 @@
+@import "../../app/app.component.scss";
+
+/*extends*/
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-container {
+    .logo {
+        width: 200px;
+        margin: 20px auto 0 auto;
+
+        img {
+            width: 200px;
+            height: inherit;
+        }
+    }
+
+    .login-form {
+        @extend .center;
+        width: 450px;
+        border: 1px solid $primary;
+
+        @media #{$mobile-landscape} {
+            width: calc(100% - 2px);
+        }
+
+        @media #{$mobile-portrait} {
+            width: calc(100% - 2px);
+        }
+
+        .login-header {
+            .material-icons {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .form {
+        margin: 25px 0 10px 0;
+        padding: 0 10px;
+    }
+
+    .additional {
+        margin-top: 15px;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+}
+.right {
+    float: right;
+}
