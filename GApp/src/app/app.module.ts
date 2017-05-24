@@ -31,3 +31,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 export class AppModule {
 
 }
+
+
+// firebase deploy --project gapp-def88
+// firebase serve
