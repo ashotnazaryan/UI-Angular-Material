@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
+import { Guard } from '../services/auth/guard';
 import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './components/app/app.component';
@@ -26,7 +27,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
         MaterialModule,
         AppRoutingModule
     ],
-    providers: []
+    providers: [Guard],
 })
 export class AppModule {
 
