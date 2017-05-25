@@ -90,6 +90,10 @@ AppModule = __decorate([
     })
 ], AppModule);
 
+//ng-bulid, for building dist folder
+//firebase init, for creating firebase.json
+//firebase serve, for local hosting
+//firebase deploy, for deploying on real host 
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
