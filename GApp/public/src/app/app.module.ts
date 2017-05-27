@@ -3,8 +3,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import 'hammerjs';
+import { HttpModule, Http }    from '@angular/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 import { Guard } from '../services/auth/guard';
-import { AppRoutingModule } from './app.routing.module';
+import { AppRoutingModule } from './app.routing.module'; 
 
 import { AppComponent } from './components/app/app.component';
 import { LoginComponent } from './components/user/login/login.component';
@@ -13,14 +17,10 @@ import { NavmenuComponent } from './components/shared/navmenu/navmenu.component'
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
-// export const firebaseConfig = {
-//     apiKey: "AIzaSyBeGxpiDkiIAASm8neB7E8IrfN_Zz8vbng",
-//     authDomain: "gapp-def88.firebaseapp.com",
-//     databaseURL: "https://gapp-def88.firebaseio.com",
-//     projectId: "gapp-def88",
-//     storageBucket: "gapp-def88.appspot.com",
-//     messagingSenderId: "479758522425"
-// };
+export function HttpLoaderFactory(http: Http) {
+    // return new TranslateHttpLoader(http);
+    return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -36,6 +36,14 @@ import { FooterComponent } from './components/shared/footer/footer.component';
         BrowserAnimationsModule,
         MaterialModule,
         AppRoutingModule,
+        HttpModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [Http]
+            }
+        }),
         // AngularFireModule.initializeApp(firebaseConfig)
     ],
     providers: [Guard],

@@ -1,8 +1,25 @@
 <div class="header-container">
-  <button md-button [mdMenuTriggerFor]="menu">Menu</button>
-  <md-menu #menu="mdMenu" [overlapTrigger]="false">
-    <button md-menu-item>Item 1</button>
-    <button md-menu-item>Item 2</button>
-  </md-menu>
-  <button md-button [routerLink]="['/home']">Home</button>
+    <button md-button [mdMenuTriggerFor]="menu">Menu</button>
+    <md-menu #menu="mdMenu" [overlapTrigger]="false">
+        <button md-menu-item>About</button>
+        <button md-menu-item>Empty</button>
+    </md-menu>
+    <button md-button [routerLink]="['/home']">Home</button>
+    <button md-button [mdMenuTriggerFor]="menuLang">
+        <md-icon>language</md-icon>{{currentLanguage}}
+    </button>
+    <md-menu #menuLang="mdMenu">
+    <button md-menu-item (click)="changeLanguage('en')">
+        <md-icon>language</md-icon>
+        <span>EN</span>
+    </button>
+    <button md-menu-item (click)="changeLanguage('ru')">
+        <md-icon>language</md-icon>
+        <span>RU</span>
+    </button>
+    <button md-menu-item (click)="changeLanguage('am')">
+        <md-icon>language</md-icon>
+        <span>AM</span>
+    </button>
+    </md-menu>
 </div>

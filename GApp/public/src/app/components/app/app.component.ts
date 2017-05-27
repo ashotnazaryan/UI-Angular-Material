@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import {TranslateService} from '@ngx-translate/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +10,9 @@ import { Component, Input } from '@angular/core';
 
 export class AppComponent {
   @Input() sidenav: any;
-  constructor() {
-    
+  
+  constructor(translate: TranslateService) {
+        translate.setDefaultLang('en');
+        translate.use('en');
   }
 }
