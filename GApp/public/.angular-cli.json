@@ -9,10 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
-        "assets/i18n/en.json",
-        "assets/i18n/ru.json",
-        "assets/i18n/am.json"
+        "favicon.ico"
       ],
       "index": "./index.html",
       "main": "./src/main.ts",

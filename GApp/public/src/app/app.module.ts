@@ -7,7 +7,7 @@ import { HttpModule, Http }    from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { Guard } from '../services/auth/guard';
+import { Guard } from './services/auth/guard';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { AppComponent } from './components/app/app.component';
@@ -18,8 +18,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
 export function HttpLoaderFactory(http: Http) {
-    // return new TranslateHttpLoader(http);
-    return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+    return new TranslateHttpLoader(http);
+    //return new TranslateHttpLoader(http, "../assets/i18n/", ".json");
 }
 
 @NgModule({
@@ -40,7 +40,7 @@ export function HttpLoaderFactory(http: Http) {
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
+                useFactory: (HttpLoaderFactory),
                 deps: [Http]
             }
         }),
