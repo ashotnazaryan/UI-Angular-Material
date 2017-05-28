@@ -1,9 +1,7 @@
 <div class="navmenu-container">
     <md-card class="card">
         <md-card-header>
-            <div md-card-avatar class="avatar">
-                <!--<img md-card-image src="assets/img/1.jpg">-->
-            </div>
+            <div md-card-avatar class="avatar"></div>
             <md-card-title>
                 <md-icon>perm_contact_calendar</md-icon>
                 <span>{{user.firstName}}</span>
@@ -21,7 +19,7 @@
          <md-card-actions>
             <button md-icon-button [routerLink]="['/login']" (click)="sidenav.close()">
             <md-icon class="md-24">power_settings_new</md-icon>
-                Logout
+                {{"User.logout" | translate}}
             </button>
         </md-card-actions>
     </md-card>

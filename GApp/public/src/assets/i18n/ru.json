@@ -1,5 +1,22 @@
 {
-    "Home": {
+    "Common": {
         "home": "Дом"
+    },
+    "Header": {
+        "menu": "Меню",
+        "about": "Обо Мне",
+        "empty": "Пусто"
+    },
+    "Footer": {
+        "ashotnazaryan": "Ашот Назарян"
+    },
+    "User": {
+        "login": "Войти",
+        "logout": "Выйти",
+        "username": "Имя Пользователя",
+        "password": "Пароль",
+        "cancel": "Отмена",
+        "forgot": "Забыли Пароль ?",
+        "signup": "Регистрироваться"
     }
 }

@@ -1,5 +1,22 @@
 {
-    "Home": {
+    "Common": {
         "home": "Home"
+    },
+    "Header": {
+        "menu": "Menu",
+        "about": "About",
+        "empty": "Empty"
+    },
+    "Footer": {
+        "ashotnazaryan": "Ashot Nazaryan"
+    },
+    "User": {
+        "login": "Log In",
+        "logout": "Log out",
+        "username": "Username",
+        "password": "Password",
+        "cancel": "Cancel",
+        "forgot": "Forgot Password ?",
+        "signup": "Sign Up"
     }
 }

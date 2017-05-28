@@ -1,10 +1,13 @@
 <div class="header-container">
-    <button md-button [mdMenuTriggerFor]="menu">Menu</button>
+    <div class="logo">
+        <img src="../../../assets/img/logo.png" />
+    </div>
+    <button md-button [routerLink]="['/home']">{{"Common.home" | translate}}</button>
+    <button md-button [mdMenuTriggerFor]="menu">{{"Header.menu" | translate}}</button>
     <md-menu #menu="mdMenu" [overlapTrigger]="false">
-        <button md-menu-item>About</button>
-        <button md-menu-item>Empty</button>
+        <button md-menu-item>{{"Header.about" | translate}}</button>
+        <button md-menu-item>{{"Header.empty" | translate}}</button>
     </md-menu>
-    <button md-button [routerLink]="['/home']">Home</button>
     <button md-button [mdMenuTriggerFor]="menuLang">
         <md-icon>language</md-icon>{{currentLanguage}}
     </button>

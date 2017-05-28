@@ -2,27 +2,27 @@
     <div class="login-form">
         <md-toolbar class="login-header">
             <i class="material-icons">lock_outline</i>
-            <span>Login</span>
+            <span>{{"User.login" | translate}}</span>
         </md-toolbar>
         <md-card-content>
             <form class="form">
                 <md-input-container class="full-width">
                     <input mdInput>
                     <md-placeholder>
-                        <md-icon>email</md-icon> Username
+                        <md-icon>email</md-icon> {{"User.username" | translate}}
                     </md-placeholder>
                 </md-input-container>
                 <md-input-container class="full-width">
                     <input mdInput type="password" >
                     <md-placeholder>
-                        <md-icon>lock</md-icon> Password
+                        <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
                 </md-input-container>
-                <a md-raised-button class="gapp-button primary">Log In</a>
-                <a md-button class="gapp-button default right">Cancel</a>
+                <a md-raised-button class="gapp-button primary">{{"User.login" | translate}}</a>
+                <a md-button class="gapp-button default right">{{"User.cancel" | translate}}</a>
                 <div class="additional">
-                    <a md-button class="gapp-button warning">Forgot Password ?</a>
-                    <a md-raised-button class="gapp-button success right">Sign Up</a>
+                    <a md-button class="gapp-button warning">{{"User.forgot" | translate}}</a>
+                    <a md-raised-button class="gapp-button success right">{{"User.signup" | translate}}</a>
                 </div>
             </form>
         </md-card-content>

@@ -5,6 +5,14 @@
     padding: 0 0 0 50px;
     border-bottom: 1px solid $gappPrimary;
     background-color: $gappPrimary;
+    .logo {
+        width: 140px;
+        height: 100%;
+        float: left;
+        img {
+            height: 100%;
+        }
+    }
     button {
         height: 40px;
     }

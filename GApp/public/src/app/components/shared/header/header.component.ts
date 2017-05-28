@@ -29,9 +29,9 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
             case 'en':
                 return 'English';
             case 'ru':
-                return 'Russian';
+                return 'Русский';
             case 'am':
-                return 'Armenian';
+                return 'Հայերեն';
             default:
                 throw 'Unsupported Language';
         }

@@ -1,5 +1,22 @@
 {
-    "Home": {
+    "Common": {
         "home": "Տուն"
+    },
+    "Header": {
+        "menu": "Մենյու",
+        "about": "Իմ Մասին",
+        "empty": "Դատարկ"
+    },
+    "Footer": {
+        "ashotnazaryan": "Աշոտ Նազարյան"
+    },
+    "User": {
+        "login": "Մուտք",
+        "logout": "Ելք",
+        "username": "Մուտքանուն",
+        "password": "Գաղտնաբառ",
+        "cancel": "Չեղարկել",
+        "forgot": "Մոռացե՞լ եք գաղնաբառը",
+        "signup": "Գրանցվել"
     }
 }
