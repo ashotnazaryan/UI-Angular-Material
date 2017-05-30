@@ -1,2 +1,2 @@
 # Angular-Material
-Test project
+UI Angular Material 2
