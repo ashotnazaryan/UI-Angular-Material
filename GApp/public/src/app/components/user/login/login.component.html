@@ -18,7 +18,7 @@
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
                 </md-input-container>
-                <a md-raised-button class="gapp-button primary">{{"User.login" | translate}}</a>
+                <a md-raised-button class="gapp-button primary" (click)="loginGoogle()">Login with GOOGLE</a>
                 <a md-button class="gapp-button default right">{{"User.cancel" | translate}}</a>
                 <div class="additional">
                     <a md-button class="gapp-button warning">{{"User.forgot" | translate}}</a>

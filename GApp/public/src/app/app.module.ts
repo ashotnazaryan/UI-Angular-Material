@@ -8,6 +8,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { Guard } from './services/auth/guard';
+import { FirebaseService } from './services/firebase.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { AppComponent } from './components/app/app.component';
@@ -19,8 +20,15 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
-    //return new TranslateHttpLoader(http, "../assets/i18n/", ".json");
 }
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyBeGxpiDkiIAASm8neB7E8IrfN_Zz8vbng',
+  authDomain: 'gapp-def88.firebaseapp.com',
+  databaseURL: 'https://gapp-def88.firebaseio.com',
+  storageBucket: 'gs://gapp-def88.appspot.com',
+//   messagingSenderId: '<your-messaging-sender-id>'
+};
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -44,9 +52,9 @@ export function HttpLoaderFactory(http: Http) {
                 deps: [Http]
             }
         }),
-        // AngularFireModule.initializeApp(firebaseConfig)
+        AngularFireModule.initializeApp(firebaseConfig),
     ],
-    providers: [Guard],
+    providers: [Guard, FirebaseService]
 })
 export class AppModule {
 
