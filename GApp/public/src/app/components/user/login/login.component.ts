@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { FirebaseService } from '../../../services/firebase.service';
+//import { FirebaseService } from '../../../services/firebase.service';
 
 @Component({
   templateUrl: './login.component.html',
@@ -9,14 +9,14 @@ import { FirebaseService } from '../../../services/firebase.service';
 })
 export class LoginComponent {
 
-  constructor(public fbs: FirebaseService, private router: Router) {
+  constructor(/*public fbs: FirebaseService,*/ private router: Router) {
 
   }
 
-  loginGoogle() {
-    this.fbs.loginWithGoogle()
-        .then((data) => {
-            this.router.navigate(['/home']);
-        })
-    }
+//   loginGoogle() {
+//     this.fbs.loginWithGoogle()
+//         .then((data) => {
+//             this.router.navigate(['/home']);
+//         })
+//     }
 }

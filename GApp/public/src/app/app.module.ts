@@ -8,7 +8,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { Guard } from './services/auth/guard';
-import { FirebaseService } from './services/firebase.service';
+//import { FirebaseService } from './services/firebase.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { AppComponent } from './components/app/app.component';
@@ -54,7 +54,7 @@ export const firebaseConfig = {
         }),
         AngularFireModule.initializeApp(firebaseConfig),
     ],
-    providers: [Guard, FirebaseService]
+    providers: [Guard, /*FirebaseService*/]
 })
 export class AppModule {
 
