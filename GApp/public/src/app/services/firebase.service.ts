@@ -21,6 +21,8 @@ export class FirebaseService {
     logout() {
         return this.afAuth.auth.signOut()
             .then((data) => {
+                let user = localStorage.getItem('currentUser');
+                user = null;
                 return data;
             });
     }

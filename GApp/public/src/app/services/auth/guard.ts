@@ -11,14 +11,12 @@ export class Guard implements CanActivate {
 
      canActivate() {
          debugger
-         if (this.user) {
+         if (typeof this.user !== 'undefined' && this.user) {
+            //this.router.navigate(['/home']);
             return true;
-            // logged in so return true
-            // this.router.navigate(['/dashboard']);
         }
         else {
-            // // not logged in so redirect to login page
-            //this.router.navigate(['/landing']);
+            this.router.navigate(['/login']);
             return false;
         }
     }
