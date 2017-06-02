@@ -4,20 +4,20 @@
             <div md-card-avatar class="avatar"></div>
             <md-card-title>
                 <md-icon>perm_contact_calendar</md-icon>
-                <span>{{currentUser.displayName || 'Anonym user'}}</span>
-                <span>{{currentUser.email || 'Not found'}}</span>
+                <span>{{user.displayName || 'Anonym user'}}</span>
+                <span>{{user.email || 'Not found'}}</span>
             </md-card-title>
             <md-card-subtitle>
                 <md-icon>room</md-icon>
-                <span>{{currentUser.location || 'No location found'}}</span>
+                <span>{{user.location || 'No location found'}}</span>
             </md-card-subtitle>
         </md-card-header>
         
         <md-card-content>
-            <p>{{currentUser.about || 'No detailed information'}}</p>
+            <p>{{user.about || 'No detailed information'}}</p>
         </md-card-content>
          <md-card-actions>
-            <button md-icon-button [routerLink]="['/login']" (click)="sidenav.close()">
+            <button md-raised-button [routerLink]="['/login']" (click)="sidenav.close(); logout()">
             <md-icon class="md-24">power_settings_new</md-icon>
                 {{"User.logout" | translate}}
             </button>

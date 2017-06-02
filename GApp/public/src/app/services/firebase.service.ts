@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
-import 'rxjs/add/operator/toPromise';
 import * as firebase from 'firebase/app';
 
 @Injectable()
@@ -13,11 +12,17 @@ export class FirebaseService {
     }
 
     loginWithGoogle() {
-        return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+            .then((data) => {
+                return data;
+            });
     }
 
     logout() {
-        return this.afAuth.auth.signOut();
+        return this.afAuth.auth.signOut()
+            .then((data) => {
+                return data;
+            });
     }
 
     // getData() {

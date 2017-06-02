@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { FirebaseService } from '../../../services/firebase.service';
 
 @Component({
   selector: 'shared-navmenu',
@@ -9,10 +12,17 @@ import { Component, Input } from '@angular/core';
 export class NavmenuComponent {
 
     @Input() sidenav: any;
-    currentUser: any;
+    user: any;
 
-    constructor(){     
-        this.currentUser = localStorage.getItem('user');
-        console.log("User: ", this.currentUser);
+    constructor(public firebaseservice: FirebaseService, private router: Router){     
+        this.user = localStorage.getItem('currentUser');
+        console.log("User: ", localStorage.getItem('currentUser'));
+    }
+
+    logout() {
+        this.firebaseservice.logout()
+            .then((data) => {
+                console.log("logout: ", data);
+            });
     }
 }
