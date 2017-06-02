@@ -4,17 +4,17 @@
             <div md-card-avatar class="avatar"></div>
             <md-card-title>
                 <md-icon>perm_contact_calendar</md-icon>
-                <span>{{user.firstName}}</span>
-                <span>{{user.lastName}}</span>
+                <span>{{currentUser.displayName || 'Anonym user'}}</span>
+                <span>{{currentUser.email || 'Not found'}}</span>
             </md-card-title>
             <md-card-subtitle>
                 <md-icon>room</md-icon>
-                <span>{{user.location}}</span>
+                <span>{{currentUser.location || 'No location found'}}</span>
             </md-card-subtitle>
         </md-card-header>
         
         <md-card-content>
-            <p>{{user.about}}</p>
+            <p>{{currentUser.about || 'No detailed information'}}</p>
         </md-card-content>
          <md-card-actions>
             <button md-icon-button [routerLink]="['/login']" (click)="sidenav.close()">

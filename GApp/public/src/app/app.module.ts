@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MaterialModule } from '@angular/material';
-import { AngularFireModule } from 'angularfire2';
 import 'hammerjs';
+
+import { Observable } from 'rxjs/Observable';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { Guard } from './services/auth/guard';
-//import { FirebaseService } from './services/firebase.service';
+import { FirebaseService } from './services/firebase.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { AppComponent } from './components/app/app.component';
@@ -53,8 +59,10 @@ export const firebaseConfig = {
             }
         }),
         AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule
     ],
-    providers: [Guard, /*FirebaseService*/]
+    providers: [Guard, FirebaseService]
 })
 export class AppModule {
 

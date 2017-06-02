@@ -7,15 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 
 export class NavmenuComponent {
+
     @Input() sidenav: any;
-    user: Object;
-    constructor(){
-        
-        this.user = {
-            firstName: "Ashot",
-            lastName: "Nazaryan",
-            location: "Yerevan",
-            about: "tra la la"
-        }
+    currentUser: any;
+
+    constructor(){     
+        this.currentUser = localStorage.getItem('user');
+        console.log("User: ", this.currentUser);
     }
 }
