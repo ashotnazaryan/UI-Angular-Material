@@ -15,8 +15,7 @@ export class NavmenuComponent {
     user: any;
 
     constructor(public firebaseservice: FirebaseService, private router: Router){     
-        this.user = localStorage.getItem('currentUser');
-        console.log("User: ", localStorage.getItem('currentUser'));
+        this.user = localStorage.getItem('qwertyuiop');
     }
 
     logout() {

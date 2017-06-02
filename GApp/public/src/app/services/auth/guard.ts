@@ -6,7 +6,7 @@ export class Guard implements CanActivate {
 
     user: Object;
     constructor(protected router: Router) {
-        this.user = localStorage.getItem('currentUser');
+        this.user = localStorage.getItem('qwertyuiop');
     }
 
      canActivate() {

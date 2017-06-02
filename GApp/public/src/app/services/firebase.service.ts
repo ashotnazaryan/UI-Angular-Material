@@ -12,6 +12,7 @@ export class FirebaseService {
     }
 
     loginWithGoogle() {
+        debugger
         return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
             .then((data) => {
                 return data;
@@ -19,11 +20,11 @@ export class FirebaseService {
     }
 
     logout() {
+        debugger
         return this.afAuth.auth.signOut()
             .then((data) => {
-                let user = localStorage.getItem('currentUser');
+                let user = localStorage.getItem('qwertyuiop');
                 user = null;
-                return data;
             });
     }
 

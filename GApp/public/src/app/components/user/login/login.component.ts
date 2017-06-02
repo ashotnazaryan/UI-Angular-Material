@@ -19,6 +19,7 @@ export class LoginComponent {
   loginGoogle() {
     this.firebaseservice.loginWithGoogle()
         .then((data) => {
+          debugger
             if (data == null) {
               this.isLoggedIn = false;
               this.router.navigate(['/login']);
@@ -26,7 +27,7 @@ export class LoginComponent {
             else {
               this.isLoggedIn = true;
               this.user = data.user;
-              localStorage.setItem('currentUser', this.user);
+              localStorage.setItem('qwertyuiop', this.user);
               console.log(this.user);
               this.router.navigate(['/home']);
             }

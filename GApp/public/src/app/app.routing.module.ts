@@ -7,8 +7,8 @@ import { Guard } from './services/auth/guard';
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [Guard], },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home' }
+  { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' }
 ];
 @NgModule({
   imports: [
