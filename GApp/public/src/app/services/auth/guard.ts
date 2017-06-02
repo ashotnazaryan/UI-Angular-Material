@@ -9,7 +9,7 @@ export class Guard implements CanActivate {
     }
 
      canActivate() {
-         debugger
+         //debugger
          let user = JSON.parse(localStorage.getItem('currentUser'));
          if (user) {
             //this.router.navigate(['/home']);
