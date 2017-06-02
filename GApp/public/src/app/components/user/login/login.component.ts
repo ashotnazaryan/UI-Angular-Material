@@ -27,7 +27,6 @@ export class LoginComponent {
             else {
               this.isLoggedIn = true;
               this.user = data.user;
-              localStorage.setItem('qwertyuiop', this.user);
               console.log(this.user);
               this.router.navigate(['/home']);
             }
