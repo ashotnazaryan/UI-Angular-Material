@@ -1,11 +1,16 @@
 <div class="navmenu-container">
     <md-card class="card">
         <md-card-header>
-            <div md-card-avatar class="avatar" ngStyle="{'background-image': 'url(' + user.photoURL + ')'}"></div>
-            <md-card-title>
-                <md-icon>perm_contact_calendar</md-icon>
-                <span>{{user.displayName || 'Anonym user'}}</span>
-                <span>{{user.email || 'Not found'}}</span>
+            <div md-card-avatar class="avatar">
+                <img src="{{user.photoURL}}" />
+            </div>
+            <md-card-title class="card-title">
+                    <md-icon>account_circle</md-icon>
+                    <span>{{user.displayName || 'Anonym user'}}</span>
+            </md-card-title>
+            <md-card-title class="card-title">
+                    <md-icon>email</md-icon>
+                    <span>{{user.email || 'Not found'}}</span>
             </md-card-title>
             <md-card-subtitle>
                 <md-icon>room</md-icon>
@@ -17,7 +22,7 @@
             <p>{{user.about || 'No detailed information'}}</p>
         </md-card-content>
          <md-card-actions>
-            <button md-raised-button [routerLink]="['/login']" (click)="sidenav.close(); logout()">
+            <button md-raised-button class="gapp-button warning full-width" [routerLink]="['/login']" (click)="sidenav.close(); logout()">
             <md-icon class="md-24">power_settings_new</md-icon>
                 {{"User.logout" | translate}}
             </button>

@@ -32,8 +32,13 @@
     font-weight: normal;
     font-style: normal;
 }
-
+html {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
 body {
+    height: 100%;
     margin: 0;
     font-family: Roboto-Regular;
 }

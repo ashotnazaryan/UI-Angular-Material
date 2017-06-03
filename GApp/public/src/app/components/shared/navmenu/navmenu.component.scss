@@ -9,6 +9,19 @@
             background-size: cover;
             width: 60px;
             height: 60px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        .card-title {
+            display: flex;
+            .material-icons {
+                font-size: 1.5em;
+            }
+            span {
+                font-size: 0.85em;
+            }
         }
     }
 }

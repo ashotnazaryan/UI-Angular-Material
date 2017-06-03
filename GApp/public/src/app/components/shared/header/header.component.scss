@@ -9,6 +9,10 @@
         width: 140px;
         height: 100%;
         float: left;
+        cursor: pointer;
+        @media #{$mobile-portrait} {
+            display: none;
+        }
         img {
             height: 100%;
         }

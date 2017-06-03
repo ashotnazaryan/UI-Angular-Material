@@ -18,12 +18,12 @@
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
                 </md-input-container>
-                <a md-raised-button class="gapp-button primary" (click)="loginGoogle()">Login with GOOGLE</a>
-                <a md-button class="gapp-button default right">{{"User.cancel" | translate}}</a>
-                <div class="additional">
+                <a md-button class="gapp-button success">{{"User.login" | translate}}</a>
+                <a md-raised-button class="gapp-button primary right" (click)="loginGoogle()">{{"User.glogin" | translate}}</a>
+                <!--<div class="additional">
                     <a md-button class="gapp-button warning">{{"User.forgot" | translate}}</a>
                     <a md-raised-button class="gapp-button success right">{{"User.signup" | translate}}</a>
-                </div>
+                </div>-->
             </form>
         </md-card-content>
     </div>

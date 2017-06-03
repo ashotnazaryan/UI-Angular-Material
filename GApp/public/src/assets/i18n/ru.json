@@ -12,6 +12,7 @@
     },
     "User": {
         "login": "Войти",
+        "glogin": "Войти с Google",
         "logout": "Выйти",
         "username": "Имя Пользователя",
         "password": "Пароль",

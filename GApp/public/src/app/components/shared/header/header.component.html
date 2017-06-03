@@ -1,28 +1,27 @@
 <div class="header-container">
-    <div class="logo">
+    <div class="logo" [routerLink]="['/home']">
         <img src="../../../assets/img/logo.png" />
     </div>
-    <button md-button [routerLink]="['/home']">{{"Common.home" | translate}}</button>
     <button md-button [mdMenuTriggerFor]="menu">{{"Header.menu" | translate}}</button>
     <md-menu #menu="mdMenu" [overlapTrigger]="false">
         <button md-menu-item>{{"Header.about" | translate}}</button>
         <button md-menu-item>{{"Header.empty" | translate}}</button>
     </md-menu>
-    <button md-button [mdMenuTriggerFor]="menuLang">
+    <button md-button class="right" [mdMenuTriggerFor]="menuLang">
         <md-icon>language</md-icon>{{currentLanguage}}
     </button>
-    <md-menu #menuLang="mdMenu">
-    <button md-menu-item (click)="changeLanguage('en')">
-        <md-icon>language</md-icon>
-        <span>EN</span>
-    </button>
-    <button md-menu-item (click)="changeLanguage('ru')">
-        <md-icon>language</md-icon>
-        <span>RU</span>
-    </button>
-    <button md-menu-item (click)="changeLanguage('am')">
-        <md-icon>language</md-icon>
-        <span>AM</span>
-    </button>
+    <md-menu #menuLang="mdMenu" [overlapTrigger]="false">
+        <button md-menu-item (click)="changeLanguage('en')">
+            <md-icon>language</md-icon>
+            <span>EN</span>
+        </button>
+        <button md-menu-item (click)="changeLanguage('ru')">
+            <md-icon>language</md-icon>
+            <span>RU</span>
+        </button>
+        <button md-menu-item (click)="changeLanguage('am')">
+            <md-icon>language</md-icon>
+            <span>AM</span>
+        </button>
     </md-menu>
 </div>

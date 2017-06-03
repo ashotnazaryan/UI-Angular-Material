@@ -21,7 +21,7 @@ export class FirebaseService {
     }
 
     logout() {
-        debugger
+        //debugger
         return this.afAuth.auth.signOut()
             .then((data) => {
                 localStorage.removeItem('currentUser');

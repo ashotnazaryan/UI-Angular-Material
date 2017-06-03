@@ -12,6 +12,7 @@
     },
     "User": {
         "login": "Log In",
+        "glogin": "Login with GOOGLE",
         "logout": "Log out",
         "username": "Username",
         "password": "Password",

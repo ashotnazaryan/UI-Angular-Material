@@ -12,6 +12,7 @@
     },
     "User": {
         "login": "Մուտք",
+        "glogin": "Google մուտք",
         "logout": "Ելք",
         "username": "Մուտքանուն",
         "password": "Գաղտնաբառ",
