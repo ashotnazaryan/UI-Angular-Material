@@ -7,6 +7,12 @@
         "about": "Իմ Մասին",
         "empty": "Դատարկ"
     },
+    "Navmenu": {
+        "nouser": "Անհայտ օգտատեր",
+        "noemail": "Անհայտ էլ․ փոստ",
+        "nolocation": "Անհայտ վայր",
+        "noinformation": "Անհայտ մանրամասն տվյալներ"
+    },
     "Footer": {
         "ashotnazaryan": "Աշոտ Նազարյան"
     },

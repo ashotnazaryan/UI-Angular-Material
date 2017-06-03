@@ -19,11 +19,6 @@
         width: 450px;
         border: 1px solid $gappPrimary;
 
-        @media #{$mobile-landscape} {
-            width: 100%;
-            box-sizing: border-box;
-        }
-
         @media #{$mobile-portrait} {
             width: 100%;
             box-sizing: border-box;

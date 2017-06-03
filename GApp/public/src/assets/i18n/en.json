@@ -7,6 +7,12 @@
         "about": "About",
         "empty": "Empty"
     },
+    "Navmenu": {
+        "nouser": "Anonym User",
+        "noemail": "Email not found",
+        "nolocation": "Location not found",
+        "noinformation": "No detailed information"
+    },
     "Footer": {
         "ashotnazaryan": "Ashot Nazaryan"
     },

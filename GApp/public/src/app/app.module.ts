@@ -17,12 +17,12 @@ import { Guard } from './services/auth/guard';
 import { FirebaseService } from './services/firebase.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
-import { AppComponent } from './components/app/app.component';
-import { LoginComponent } from './components/user/login/login.component';
-import { HomeComponent } from './components/home/home.component';
-import { NavmenuComponent } from './components/shared/navmenu/navmenu.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
+import { AppComponent } from './pages/app/app.component';
+import { LoginComponent } from './pages/user/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NavmenuComponent } from './pages/shared/navmenu/navmenu.component';
+import { HeaderComponent } from './pages/shared/header/header.component';
+import { FooterComponent } from './pages/shared/footer/footer.component';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);

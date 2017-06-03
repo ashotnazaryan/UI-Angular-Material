@@ -6,20 +6,20 @@
             </div>
             <md-card-title class="card-title">
                     <md-icon>account_circle</md-icon>
-                    <span>{{user.displayName || 'Anonym user'}}</span>
+                    <span>{{user.displayName || 'Navmenu.nouser' | translate}}</span>
             </md-card-title>
             <md-card-title class="card-title">
                     <md-icon>email</md-icon>
-                    <span>{{user.email || 'Not found'}}</span>
+                    <span>{{user.email || 'Navmenu.noemail' | translate}}</span>
             </md-card-title>
             <md-card-subtitle>
                 <md-icon>room</md-icon>
-                <span>{{user.location || 'No location found'}}</span>
+                <span>{{user.location || 'Navmenu.nolocation' | translate}}</span>
             </md-card-subtitle>
         </md-card-header>
         
         <md-card-content>
-            <p>{{user.about || 'No detailed information'}}</p>
+            <p>{{user.about || 'Navmenu.noinformation' | translate}}</p>
         </md-card-content>
          <md-card-actions>
             <button md-raised-button class="gapp-button warning full-width" [routerLink]="['/login']" (click)="sidenav.close(); logout()">
