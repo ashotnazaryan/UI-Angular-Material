@@ -4,6 +4,9 @@
     height: 100%;
     .sidenav {
         width: 320px;
+        @media #{$mobile-portrait} {
+            width: 100%;
+        }
     }
     .sidenav-button {
         position: absolute;

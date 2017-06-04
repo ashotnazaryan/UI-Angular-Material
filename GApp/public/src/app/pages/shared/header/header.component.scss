@@ -3,6 +3,9 @@
 .header-container {
     height: 40px;
     padding: 0 0 0 40px;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
     border-bottom: 1px solid $gappPrimary;
     background-color: $gappPrimary;
     .logo {
@@ -18,7 +21,10 @@
         }
     }
     button {
-        height: 40px;
         color: $gappWhite;
+        &.right {
+            position: absolute;
+            right: 0;
+        }
     }
 }

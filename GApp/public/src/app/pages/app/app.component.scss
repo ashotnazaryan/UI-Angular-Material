@@ -10,11 +10,11 @@
 
 .gapp-button {
     &.primary {
-        background-color: $gappPrimary !important;
+        background-color: $gappPrimary;
         color: $gappWhite;
     }
     &.success {
-        background-color: $gappSuccess !important;
+        background-color: $gappSuccess;
         color: $gappWhite;
     }
     &.warning {

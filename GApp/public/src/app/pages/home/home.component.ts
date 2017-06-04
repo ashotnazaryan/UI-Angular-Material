@@ -6,16 +6,8 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-    
-    //@Input() sidenav: any;
 
-    constructor(/*public firebaseservice: FirebaseService*/) {
-
+    constructor() {
+        
     }
-    // getData() {
-    //     return this.firebaseservice.getData()
-    //         .then(data => { 
-    //             console.log(data); 
-    //         });
-    // }
 }
