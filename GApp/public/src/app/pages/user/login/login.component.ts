@@ -19,7 +19,7 @@ export class LoginComponent {
   loginGoogle() {
     this.firebaseservice.loginWithGoogle()
         .then((data) => {
-          //debugger
+            //debugger
             if (data == null) {
               this.isLoggedIn = false;
               this.router.navigate(['/login']);

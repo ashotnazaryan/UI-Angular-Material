@@ -27,11 +27,11 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
     getCurrentLanguage = function(lang: string){
         switch(lang){
             case 'en':
-                return 'English';
+                return 'EN';
             case 'ru':
-                return 'Русский';
+                return 'RU';
             case 'am':
-                return 'Հայերեն';
+                return 'AM';
             default:
                 throw 'Unsupported Language';
         }
