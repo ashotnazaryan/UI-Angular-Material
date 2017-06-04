@@ -16,6 +16,9 @@
     "Footer": {
         "ashotnazaryan": "Ашот Назарян"
     },
+    "About": {
+        "about": "Про"
+    },
     "User": {
         "login": "Войти",
         "glogin": "Google Вход",

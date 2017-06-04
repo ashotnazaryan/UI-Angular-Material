@@ -9,9 +9,7 @@
     border-bottom: 1px solid $gappPrimary;
     background-color: $gappPrimary;
     .logo {
-        width: 140px;
         height: 100%;
-        float: right;
         cursor: pointer;
         @media #{$mobile-portrait} {
             display: none;
@@ -24,7 +22,7 @@
         color: $gappWhite;
         &.right {
             position: absolute;
-            right: 0;
+            right: 10px;
         }
     }
 }

@@ -16,6 +16,9 @@
     "Footer": {
         "ashotnazaryan": "Ashot Nazaryan"
     },
+    "About": {
+        "about": "About"
+    },
     "User": {
         "login": "Login",
         "glogin": "GOOGLE Login",
