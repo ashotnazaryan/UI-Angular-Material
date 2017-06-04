@@ -4,10 +4,10 @@ import { Router } from '@angular/router';
 import { FirebaseService } from '../../../services/firebase.service';
 
 @Component({
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: './login.html',
+  styleUrls: ['./login.scss']
 })
-export class LoginComponent {
+export class Login {
 
   user: any;
   isLoggedIn: boolean;

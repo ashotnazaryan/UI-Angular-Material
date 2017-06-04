@@ -3,11 +3,11 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'shared-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  templateUrl: './header.html',
+  styleUrls: ['./header.scss']
 })
 
- export class HeaderComponent {
+ export class Header {
     currentLanguage: string;
     translate: TranslateService;
 

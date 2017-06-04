@@ -1,7 +1,7 @@
 <header class="header-container">
     <button md-button [mdMenuTriggerFor]="menu">{{"Header.menu" | translate}}</button>
     <md-menu #menu="mdMenu" [overlapTrigger]="false">
-        <button md-menu-item>{{"Header.about" | translate}}</button>
+        <button md-menu-item [routerLink]="['./about']">{{"Header.about" | translate}}</button>
         <button md-menu-item>{{"Header.empty" | translate}}</button>
     </md-menu>
     <button md-button class="right" [mdMenuTriggerFor]="menuLang">

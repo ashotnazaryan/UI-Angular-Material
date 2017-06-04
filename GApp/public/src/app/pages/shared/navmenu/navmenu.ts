@@ -5,11 +5,11 @@ import { FirebaseService } from '../../../services/firebase.service';
 
 @Component({
   selector: 'shared-navmenu',
-  templateUrl: './navmenu.component.html',
-  styleUrls: ['./navmenu.component.scss']
+  templateUrl: './navmenu.html',
+  styleUrls: ['./navmenu.scss']
 })
 
-export class NavmenuComponent {
+export class Navmenu {
 
     @Input() sidenav: any;
     user: any;

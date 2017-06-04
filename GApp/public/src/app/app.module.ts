@@ -18,12 +18,13 @@ import { Guard } from './services/auth/guard';
 import { FirebaseService } from './services/firebase.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
-import { AppComponent } from './pages/app/app.component';
-import { LoginComponent } from './pages/user/login/login.component';
-import { HomeComponent } from './pages/home/home.component';
-import { NavmenuComponent } from './pages/shared/navmenu/navmenu.component';
-import { HeaderComponent } from './pages/shared/header/header.component';
-import { FooterComponent } from './pages/shared/footer/footer.component';
+import { App } from './pages/app/app';
+import { Login } from './pages/user/login/login';
+import { Home } from './pages/home/home';
+import { About } from './pages/about/about';
+import { Navmenu } from './pages/shared/navmenu/navmenu';
+import { Header } from './pages/shared/header/header';
+import { Footer } from './pages/shared/footer/footer';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -38,14 +39,15 @@ export const firebaseConfig = {
 };
 
 @NgModule({
-    bootstrap: [AppComponent],
+    bootstrap: [App],
     declarations: [
-        AppComponent,
-        LoginComponent,
-        HomeComponent,
-        NavmenuComponent,
-        HeaderComponent,
-        FooterComponent
+        App,
+        Login,
+        Home,
+        About,
+        Navmenu,
+        Header,
+        Footer
     ],
     imports: [
         BrowserAnimationsModule,

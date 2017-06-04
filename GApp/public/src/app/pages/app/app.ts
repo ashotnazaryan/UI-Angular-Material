@@ -1,14 +1,13 @@
-import { Component/*, Input*/ } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss']
 })
 
-export class AppComponent {
-  // @Input() sidenav: any;
+export class App {
   
   constructor(translate: TranslateService) {
         translate.setDefaultLang('en');
