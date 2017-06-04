@@ -28,8 +28,8 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
         switch(lang){
             case 'en':
                 return 'gb';
-            case 'ru':
-                return 'ru';
+            case 'ua':
+                return 'ua';
             case 'am':
                 return 'am';
             default:

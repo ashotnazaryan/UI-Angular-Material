@@ -1,0 +1,32 @@
+{
+    "Common": {
+        "home": "Дiм"
+    },
+    "Header": {
+        "menu": "Меню",
+        "about": "Про Мене",
+        "empty": "Пусто"
+    },
+    "Navmenu": {
+        "nouser": "Анонімний користувач",
+        "noemail": "Емейл не найден",
+        "nolocation": "Місцезнаходження не знайдено",
+        "noinformation": "Немає детальної інформації"
+    },
+    "Footer": {
+        "ashotnazaryan": "Ашот Назарян"
+    },
+    "About": {
+        "about": "Про"
+    },
+    "User": {
+        "login": "Увійти",
+        "glogin": "Google Вхід",
+        "logout": "Вийти",
+        "username": "Ім'я Користувача",
+        "password": "Пароль",
+        "cancel": "Відміна",
+        "forgot": "Забули Пароль ?",
+        "signup": "Реєструватися"
+    }
+}
