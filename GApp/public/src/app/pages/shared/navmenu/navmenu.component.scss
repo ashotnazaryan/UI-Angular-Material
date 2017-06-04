@@ -16,12 +16,17 @@
         }
         .card-title {
             display: flex;
+            align-items: center;
             .material-icons {
                 font-size: 1.5em;
             }
             span {
                 font-size: 0.85em;
             }
+        }
+        .card-subtitle {
+            display: flex;
+            align-items: center;
         }
     }
 }

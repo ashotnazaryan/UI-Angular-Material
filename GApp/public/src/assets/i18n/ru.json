@@ -18,7 +18,7 @@
     },
     "User": {
         "login": "Войти",
-        "glogin": "Войти с Google",
+        "glogin": "Google Вход",
         "logout": "Выйти",
         "username": "Имя Пользователя",
         "password": "Пароль",

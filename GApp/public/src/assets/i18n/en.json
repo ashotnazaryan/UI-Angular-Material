@@ -17,9 +17,9 @@
         "ashotnazaryan": "Ashot Nazaryan"
     },
     "User": {
-        "login": "Log In",
-        "glogin": "Login with GOOGLE",
-        "logout": "Log out",
+        "login": "Login",
+        "glogin": "GOOGLE Login",
+        "logout": "Logout",
         "username": "Username",
         "password": "Password",
         "cancel": "Cancel",

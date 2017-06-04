@@ -1,14 +1,1 @@
-
-<md-sidenav-container class="app-container">
-  <md-sidenav #sidenav class="sidenav">
-    <shared-navmenu [sidenav]="sidenav"></shared-navmenu>
-  </md-sidenav>
-  <button md-icon-button (click)="sidenav.open()" class="sidenav-button">
-      <md-icon>menu</md-icon>
-  </button>
-  <shared-header></shared-header>
-  <div class="main-container">
-    <router-outlet></router-outlet>
-  </div>
-  <shared-footer></shared-footer>
-</md-sidenav-container>
+<router-outlet></router-outlet>

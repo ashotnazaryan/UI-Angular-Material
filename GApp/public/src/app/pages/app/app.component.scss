@@ -8,36 +8,6 @@
     transform: translate(-50%, -50%);
 }
 
-.app-container {
-    height: 100%;
-    .sidenav {
-        width: 320px;
-        background-color: rgba($gappPrimary, 0.2);
-    }
-    .sidenav-button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 99;
-    }
-    shared-header {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-    shared-footer {
-        display: block;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-    }
-    .main-container {
-        height: 100%;
-        padding: 40px 0;
-        box-sizing: border-box;
-    }
-}
 .gapp-button {
     &.primary {
         background-color: $gappPrimary !important;
@@ -52,6 +22,10 @@
         &:hover {
             background-color: $gappWarning;
         }
+    }
+    &.danger {
+        background-color: $gappDanger;
+        color: $gappWhite;
     }
     &.default {
         color: $gappBlack;

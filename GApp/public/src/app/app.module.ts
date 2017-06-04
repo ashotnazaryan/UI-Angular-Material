@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common'
 
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
@@ -48,6 +49,7 @@ export const firebaseConfig = {
     ],
     imports: [
         BrowserAnimationsModule,
+        CommonModule,
         MaterialModule,
         AppRoutingModule,
         HttpModule,

@@ -1,7 +1,4 @@
-<div class="header-container">
-    <div class="logo" [routerLink]="['/home']">
-        <img src="../../../assets/img/logo.png" />
-    </div>
+<header class="header-container">
     <button md-button [mdMenuTriggerFor]="menu">{{"Header.menu" | translate}}</button>
     <md-menu #menu="mdMenu" [overlapTrigger]="false">
         <button md-menu-item>{{"Header.about" | translate}}</button>
@@ -24,4 +21,7 @@
             <span>AM</span>
         </button>
     </md-menu>
-</div>
+    <div class="logo" [routerLink]="['/home']">
+        <img src="../../../assets/img/logo.png" />
+    </div>
+</header>

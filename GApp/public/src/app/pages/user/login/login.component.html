@@ -1,8 +1,11 @@
 <div class="login-container">
-    <div class="login-form">
+    <div class="login-form" [ngClass]="{'loading': loading}">
         <md-toolbar class="login-header">
             <i class="material-icons">lock_outline</i>
             <span>{{"User.login" | translate}}</span>
+            <div class="logo" [routerLink]="['/home']">
+                <img src="../../../assets/img/logo.png" />
+            </div>
         </md-toolbar>
         <md-card-content>
             <form class="form">
@@ -26,5 +29,8 @@
                 </div>-->
             </form>
         </md-card-content>
+    </div>
+    <div *ngIf="loading" class="loading">
+        <md-spinner></md-spinner>
     </div>
 </div>

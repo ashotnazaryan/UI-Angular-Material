@@ -1,8 +1,32 @@
 @import '../app/app.component.scss';
 
 .home-container {
-    padding: 10px 15px;
-    span {
-        margin: 10px;
+    height: 100%;
+    .sidenav {
+        width: 320px;
+        background-color: $gappWhite;
+    }
+    .sidenav-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    shared-header {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    shared-footer {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .main-container {
+        height: 100%;
+        padding: 40px 0;
+        box-sizing: border-box;
     }
 }

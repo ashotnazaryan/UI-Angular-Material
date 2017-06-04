@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 //import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+    
+    //@Input() sidenav: any;
+
     constructor(/*public firebaseservice: FirebaseService*/) {
 
     }
