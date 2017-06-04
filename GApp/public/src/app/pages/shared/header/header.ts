@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
@@ -8,6 +8,8 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 })
 
  export class Header {
+
+    @Input() sidenav: any;
     currentLanguage: string;
     translate: TranslateService;
 

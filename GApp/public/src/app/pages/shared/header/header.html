@@ -1,4 +1,7 @@
 <header class="header-container">
+    <button md-icon-button (click)="sidenav.open()" class="sidenav-button">
+      <md-icon>menu</md-icon>
+    </button>
     <button md-button [mdMenuTriggerFor]="menu">{{"Header.menu" | translate}}</button>
     <md-menu #menu="mdMenu" [overlapTrigger]="false">
         <button md-menu-item [routerLink]="['./about']">{{"Header.about" | translate}}</button>
