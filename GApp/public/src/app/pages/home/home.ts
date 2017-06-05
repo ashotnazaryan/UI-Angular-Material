@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
     templateUrl: './home.html',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Home {
 
-    constructor() {
-        
+    constructor(http: Http) {
+        //debugger
+        http.get('http://localhost:4201/notes')
+            .map(res => res.json())
+            .catch(data => { 
+                return data; 
+            })
+            .subscribe(response => {
+                console.log(response);
+            });
     }
 }
