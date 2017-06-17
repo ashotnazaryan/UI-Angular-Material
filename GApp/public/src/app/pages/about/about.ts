@@ -16,7 +16,8 @@ export class About {
         this.getNotes();
     }
     getNotes() {
-        let url = 'http://localhost:5000/api/notes';
+        //'http://localhost:5000/api/notes';   http://gapp-def88.herokuapp.com/api/notes
+        let url = 'http://gapp-def88.herokuapp.com/api/notes';
         let params = {};
         this.loading = true;
         this.ts.getData(url, params)

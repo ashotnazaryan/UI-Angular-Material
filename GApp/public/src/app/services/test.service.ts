@@ -19,9 +19,7 @@ import 'rxjs/add/operator/switchMap';
  
 @Injectable()
 export class TestService {
-
-    //private notesUrl = 'http://localhost:5000/notes';  // http://gapp-def88.herokuapp.com/notes
-
+    
     headers: Headers;
     options: RequestOptions;
     constructor (private http: Http) {
