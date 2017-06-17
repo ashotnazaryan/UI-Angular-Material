@@ -9,19 +9,24 @@ import { TestService } from '../../services/test.service';
 
 export class About {
 
-    data: any;
+    countries: any;
     errorMessage: any;
+    loading: boolean = false;
     constructor(private http: Http, private ts: TestService) {
         this.getNotes();
     }
     getNotes() {
-        this.ts.getData('http://gapp-def88.herokuapp.com/notes', {})
+        let url = 'http://localhost:5000/api/notes';
+        let params = {};
+        this.loading = true;
+        this.ts.getData(url, params)
             .subscribe(
                 data => {
-                    this.data = data; 
-                    console.log(data);
+                    this.loading = false;
+                    this.countries = data.countries; 
                 },
                 error =>  {
+                    this.loading = true;
                     this.errorMessage = <any>error;
                 });
     }
