@@ -12,10 +12,10 @@ export class About {
     data: any;
     errorMessage: any;
     constructor(private http: Http, private ts: TestService) {
-        this.getData();
+        this.getNotes();
     }
-    getData() {
-        this.ts.getNotes()
+    getNotes() {
+        this.ts.getData('http://gapp-def88.herokuapp.com/notes', {})
             .subscribe(
                 data => {
                     this.data = data; 
