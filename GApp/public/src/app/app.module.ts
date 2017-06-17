@@ -16,6 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { Guard } from './services/auth/guard';
 import { FirebaseService } from './services/firebase.service';
+import { TestService } from './services/test.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { App } from './pages/app/app';
@@ -66,7 +67,7 @@ export const firebaseConfig = {
         AngularFireDatabaseModule,
         AngularFireAuthModule
     ],
-    providers: [Guard, FirebaseService]
+    providers: [Guard, FirebaseService, TestService]
 })
 export class AppModule {
 
