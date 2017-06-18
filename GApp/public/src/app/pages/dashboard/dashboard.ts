@@ -3,28 +3,28 @@ import { Http } from '@angular/http';
 import { TestService } from '../../services/test.service';
 
 @Component({
-    templateUrl: './about.html',
-    styleUrls: ['./about.scss']
+    templateUrl: './dashboard.html',
+    styleUrls: ['./dashboard.scss']
 })
 
-export class About {
+export class Dashboard {
 
-    about: any = {};
+    dashboard: any = {};
     errorMessage: any;
     loading: boolean = false;
     constructor(private http: Http, private ts: TestService) {
-        this.getNotes();
+        this.getDashboard();
     }
-    getNotes() {
-        //'http://localhost:5000/api/about'   https://gapp-def88.herokuapp.com/api/notes
-        let url = 'http://gapp-def88.herokuapp.com/api/about';
+    getDashboard() {
+        
+        let url = 'http://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard
         let params = {};
         this.loading = true;
         this.ts.getData(url, params)
             .subscribe(
                 data => {
                     this.loading = false;
-                    this.about = data; 
+                    this.dashboard = data.data; 
                 },
                 error =>  {
                     this.loading = true;

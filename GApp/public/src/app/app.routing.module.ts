@@ -2,6 +2,7 @@ import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
 import { Login } from './pages/user/login/login';
 import { Home }   from './pages/home/home';
+import { Dashboard } from './pages/dashboard/dashboard';
 import { About } from './pages/about/about';
 import { Guard } from './services/auth/guard';
 
@@ -9,11 +10,13 @@ const appRoutes: Routes = [
   { path: 'login', component: Login },
   { path: 'home', component: Home, canActivate: [Guard], 
     children: [
+          { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
+          { path: 'dashboard', component: Dashboard },
           { path: 'about', component: About },
         ]
   },
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' }
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home' }
 ];
 @NgModule({
   imports: [

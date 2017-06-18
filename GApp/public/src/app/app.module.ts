@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { App } from './pages/app/app';
 import { Login } from './pages/user/login/login';
 import { Home } from './pages/home/home';
+import { Dashboard } from './pages/dashboard/dashboard';
 import { About } from './pages/about/about';
 import { Navmenu } from './pages/shared/navmenu/navmenu';
 import { Header } from './pages/shared/header/header';
@@ -45,6 +46,7 @@ export const firebaseConfig = {
         App,
         Login,
         Home,
+        Dashboard,
         About,
         Navmenu,
         Header,

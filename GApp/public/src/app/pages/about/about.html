@@ -1,10 +1,6 @@
 <div class="about-container">
     <p class="title">{{"About.about" | translate}}</p>
     <md-spinner *ngIf="loading"></md-spinner>
-    <div *ngFor="let country of countries">
-        {{country.name}} - {{country.code}}
-        <div *ngFor="let city of country.cities" style="padding-left: 20px">
-            {{city.name}} - {{city.code}}
-        </div>
-    </div>
+    <div>first name: {{about.firstname}}</div>
+    <div>last name: {{about.lastname}}</div>
 </div>
