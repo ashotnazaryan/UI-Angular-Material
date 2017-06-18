@@ -17,7 +17,7 @@ export class Dashboard {
     }
     getDashboardData() {
         
-        let url = 'http://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard
+        let url = 'https://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard
         let params = {};
         this.loading = true;
         this.ts.getData(url, params)
