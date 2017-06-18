@@ -9,7 +9,7 @@
         </md-toolbar>
         <md-card-content>
             <form class="form">
-                <md-input-container class="full-width">
+                <!--<md-input-container class="full-width">
                     <input mdInput>
                     <md-placeholder>
                         <md-icon>email</md-icon> {{"User.username" | translate}}
@@ -20,9 +20,13 @@
                     <md-placeholder>
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
-                </md-input-container>
-                <a md-button class="gapp-button success">{{"User.login" | translate}}</a>
-                <a md-raised-button class="gapp-button primary right" (click)="loginGoogle()">{{"User.glogin" | translate}}</a>
+                </md-input-container>-->
+                <p>{{"User.loginVia" | translate}}</p>
+                <div class="additional">
+                    <a md-button class="gapp-button primary" (click)="loginFacebook()">Facebook</a>
+                    <a md-raised-button class="gapp-button danger right" (click)="loginGoogle()">Google</a>
+                </div>
+                
                 <!--<div class="additional">
                     <a md-button class="gapp-button warning">{{"User.forgot" | translate}}</a>
                     <a md-raised-button class="gapp-button success right">{{"User.signup" | translate}}</a>

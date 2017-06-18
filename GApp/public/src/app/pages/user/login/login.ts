@@ -21,7 +21,6 @@ export class Login {
     this.loading = true;
     this.firebaseservice.loginWithGoogle()
         .then((data) => {
-            //debugger
             this.loading = false;
             if (data == null) {
               this.isLoggedIn = false;
@@ -33,5 +32,22 @@ export class Login {
               this.router.navigate(['/home']);
             }
       });
+    }
+
+    loginFacebook() {
+      this.loading = true;
+      this.firebaseservice.loginWithFacebook()
+          .then((data) => {
+              this.loading = false;
+              if (data == null) {
+                this.isLoggedIn = false;
+                this.router.navigate(['/login']);
+              } 
+              else {
+                this.isLoggedIn = true;
+                this.user = data.user;
+                this.router.navigate(['/home']);
+              }
+        });
     }
 }

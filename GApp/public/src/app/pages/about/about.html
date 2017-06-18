@@ -1,6 +1,6 @@
-<div class="about-container">
+<div class="about-container" *ngIf="!loading">
     <p class="title">{{"About.about" | translate}}</p>
-    <md-spinner *ngIf="loading"></md-spinner>
-    <div>first name: {{about.firstname}}</div>
-    <div>last name: {{about.lastname}}</div>
+    <div>{{"User.firstname" | translate}} : {{about.firstname}}</div>
+    <div>{{"User.lastname" | translate}} : {{about.lastname}}</div>
 </div>
+<md-spinner *ngIf="loading" class="center"></md-spinner>

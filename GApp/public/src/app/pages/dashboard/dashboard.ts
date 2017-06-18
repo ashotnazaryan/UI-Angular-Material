@@ -12,12 +12,13 @@ export class Dashboard {
     dashboard: any = {};
     errorMessage: any;
     loading: boolean = false;
+    
     constructor(private http: Http, private ts: TestService) {
         this.getDashboardData();
     }
+
     getDashboardData() {
-        
-        let url = 'https://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard
+        let url = 'https://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard   http://localhost:5000/api/dashboard
         let params = {};
         this.loading = true;
         this.ts.getData(url, params)

@@ -21,10 +21,12 @@
     },
     "User": {
         "login": "Login",
-        "glogin": "GOOGLE Login",
+        "loginVia": "Login Via",
         "logout": "Logout",
         "username": "Username",
         "password": "Password",
+        "firstname": "First Name",
+        "lastname": "Last Name",
         "cancel": "Cancel",
         "forgot": "Forgot Password ?",
         "signup": "Sign Up"

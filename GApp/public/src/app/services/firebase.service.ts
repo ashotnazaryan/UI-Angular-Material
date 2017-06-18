@@ -20,6 +20,15 @@ export class FirebaseService {
             });
     }
 
+    loginWithFacebook() {
+        // debugger
+        return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
+            .then((data) => {
+                localStorage.setItem('currentUser', JSON.stringify(data.user));
+                return data;
+            });
+    }
+
     logout() {
         //debugger
         return this.afAuth.auth.signOut()

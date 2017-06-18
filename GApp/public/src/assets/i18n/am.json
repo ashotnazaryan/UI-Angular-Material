@@ -21,10 +21,12 @@
     },
     "User": {
         "login": "Մուտք",
-        "glogin": "Google մուտք",
+        "loginVia": "Մուտքի տարբերակներ",
         "logout": "Ելք",
         "username": "Մուտքանուն",
         "password": "Գաղտնաբառ",
+        "firstname": "Անուն",
+        "lastname": "Ազգանուն",
         "cancel": "Չեղարկել",
         "forgot": "Մոռացե՞լ եք գաղնաբառը",
         "signup": "Գրանցվել"

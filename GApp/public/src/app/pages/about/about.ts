@@ -12,9 +12,11 @@ export class About {
     about: any = {};
     errorMessage: any;
     loading: boolean = false;
+
     constructor(private http: Http, private ts: TestService) {
         this.getAboutData();
     }
+    
     getAboutData() {
         //'http://localhost:5000/api/about'   https://gapp-def88.herokuapp.com/api/notes
         let url = 'https://gapp-def88.herokuapp.com/api/about';

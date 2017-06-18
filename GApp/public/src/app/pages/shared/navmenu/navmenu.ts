@@ -17,7 +17,7 @@ export class Navmenu {
     constructor(public firebaseservice: FirebaseService, private router: Router){   
         //debugger
         this.user = JSON.parse(localStorage.getItem('currentUser'));
-        console.log(this.user);
+        console.log("current User", this.user);
     }
 
     logout() {

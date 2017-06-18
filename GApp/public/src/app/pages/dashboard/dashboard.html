@@ -1,1 +1,2 @@
-<div>{{dashboard.name}}</div>
+<div *ngIf="!loading">{{dashboard.name}}</div>
+<md-spinner *ngIf="loading" class="center"></md-spinner>

@@ -20,11 +20,13 @@
         "about": "Про"
     },
     "User": {
-        "login": "Увійти",
-        "glogin": "Google Вхід",
+        "login": "Вхід",
+        "loginVia": "Увійти за допомогою",
         "logout": "Вийти",
         "username": "Ім'я Користувача",
         "password": "Пароль",
+        "firstname": "Iм'я",
+        "lastname": "Прiзвище",
         "cancel": "Відміна",
         "forgot": "Забули Пароль ?",
         "signup": "Реєструватися"
