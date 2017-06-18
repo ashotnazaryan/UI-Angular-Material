@@ -13,9 +13,9 @@ export class Dashboard {
     errorMessage: any;
     loading: boolean = false;
     constructor(private http: Http, private ts: TestService) {
-        this.getDashboard();
+        this.getDashboardData();
     }
-    getDashboard() {
+    getDashboardData() {
         
         let url = 'http://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard
         let params = {};
