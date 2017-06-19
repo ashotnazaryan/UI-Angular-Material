@@ -14,6 +14,7 @@ import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { WindowRef } from './services/window.service';
 import { Guard } from './services/auth/guard';
 import { FirebaseService } from './services/firebase.service';
 import { TestService } from './services/test.service';
@@ -69,7 +70,7 @@ export const firebaseConfig = {
         AngularFireDatabaseModule,
         AngularFireAuthModule
     ],
-    providers: [Guard, FirebaseService, TestService]
+    providers: [Guard, WindowRef , FirebaseService, TestService]
 })
 export class AppModule {
 
