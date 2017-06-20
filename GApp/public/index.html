@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
   <script>
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '312207065906011',
-        status     : true,
+        autoLogAppEvents : true,
+        status: true, 
+        cookie: true, 
         xfbml      : true,
         version    : 'v2.9'
       });
