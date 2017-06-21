@@ -26,21 +26,21 @@ export class Dashboard implements OnInit {
     getDashboardData() {
         let user = JSON.parse(localStorage.getItem('currentUser'));
         //debugger
-        this.fb.FB.api('/me/feed', (response) => {
+        // this.fb.FB.api('/me/feed', (response) => {
             
-        });
-        // let url = 'https://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard   http://localhost:5000/api/dashboard
-        // let params = {};
-        // this.loading = true;
-        // this.ts.getData(url, params)
-        //     .subscribe(
-        //         data => {
-        //             this.loading = false;
-        //             this.dashboard = data.data; 
-        //         },
-        //         error =>  {
-        //             this.loading = true;
-        //             this.errorMessage = <any>error;
-        //         });
+        // });
+        let url = 'https://gapp-def88.herokuapp.com/api/dashboard'; //https://gapp-def88.herokuapp.com/api/dashboard   http://localhost:5000/api/dashboard
+        let params = {};
+        this.loading = true;
+        this.ts.getData(url, params)
+            .subscribe(
+                data => {
+                    this.loading = false;
+                    this.dashboard = data.data; 
+                },
+                error =>  {
+                    this.loading = true;
+                    this.errorMessage = <any>error;
+                });
     }
 }
