@@ -18,6 +18,7 @@ import { WindowRef } from './services/window.service';
 import { Guard } from './services/auth/guard';
 import { FirebaseService } from './services/firebase.service';
 import { TestService } from './services/test.service';
+import { FacebookService } from './services/fb.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { App } from './pages/app/app';
@@ -70,7 +71,7 @@ export const firebaseConfig = {
         AngularFireDatabaseModule,
         AngularFireAuthModule
     ],
-    providers: [Guard, WindowRef , FirebaseService, TestService]
+    providers: [Guard, WindowRef , FirebaseService, TestService, FacebookService]
 })
 export class AppModule {
 
