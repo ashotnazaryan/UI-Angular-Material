@@ -30,8 +30,8 @@ export class About implements OnInit {
     
     getAboutData() {
         debugger
-        this.facebookService.getPosts('unsplash')
-            .map(data => console.log(data));
+        this.facebookService.getPosts('unsplash')  //100000278184623 my user-id
+            .subscribe(data => console.log(data));
         //'http://localhost:5000/api/about'   https://gapp-def88.herokuapp.com/api/notes
         // let url = 'https://gapp-def88.herokuapp.com/api/about';
         // let params = {};
