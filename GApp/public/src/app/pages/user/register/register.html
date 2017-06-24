@@ -1,8 +1,8 @@
-<div class="login-container">
-    <div class="login-form" [ngClass]="{'loading': loading}">
-        <md-toolbar class="login-header">
+<div class="register-container">
+    <div class="register-form" [ngClass]="{'loading': loading}">
+        <md-toolbar class="register-header">
             <i class="material-icons">lock_outline</i>
-            <span>{{"User.login" | translate}}</span>
+            <span>{{"User.register" | translate}}</span>
             <div class="logo">
                 <img src="../../../assets/img/logo.png" />
             </div>
@@ -16,24 +16,17 @@
                     </md-placeholder>
                 </md-input-container>
                 <md-input-container class="full-width">
-                    <input mdInput type="password" [(ngModel)]="user.password" #pd="ngModel" name="pd">
+                    <input mdInput type="password" mdInput [(ngModel)]="user.password" #pd="ngModel" name="pd">
                     <md-placeholder>
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
-                </md-input-container>                
-                <div class="additional">
-                    <a md-button class="gapp-button primary" (click)="login(user)">{{"User.login" | translate}}</a>
-                    <a md-raised-button class="gapp-button success right" [routerLink]="['../register']">{{"User.signup" | translate}}</a>
-                </div>
+                </md-input-container>
                 <p>{{"User.loginVia" | translate}}</p>
                 <div class="additional">
-                    <a md-button class="gapp-button primary" (click)="loginFacebook()">Facebook</a>
-                    <a md-raised-button class="gapp-button danger right" (click)="loginGoogle()">Google</a>
+                    <a md-button class="gapp-button warning" [routerLink]="['../login']">{{"User.cancel" | translate}}</a>
+                    <a md-raised-button class="gapp-button success right" (click)="register(user)">{{"User.signup" | translate}}</a>
                 </div>
             </form>
         </md-card-content>
-    </div>
-    <div *ngIf="loading" class="loading">
-        <md-spinner></md-spinner>
     </div>
 </div>

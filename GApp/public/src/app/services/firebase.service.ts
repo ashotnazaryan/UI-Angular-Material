@@ -4,11 +4,23 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/fromPromise';
+import {  } from 'angularfire2/auth';
+
 @Injectable()
 export class FirebaseService {
 
     constructor(private http: Http, public afAuth: AngularFireAuth, public db: AngularFireDatabase) {
 
+    }
+
+    loginEmailPassword(user) {
+        debugger
+        return this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
+            .then((data) => {
+
+            })
     }
 
     loginWithGoogle() {
@@ -35,6 +47,15 @@ export class FirebaseService {
             .then((data) => {
                 localStorage.removeItem('currentUser');
             });
+    }
+
+    registerUser(user) {
+        debugger
+        return this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
+            .then((data) => {
+
+            });
+
     }
 
     // getData() {

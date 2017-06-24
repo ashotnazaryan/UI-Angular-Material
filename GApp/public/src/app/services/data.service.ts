@@ -18,7 +18,7 @@ import 'rxjs/add/operator/switchMap';
  
  
 @Injectable()
-export class TestService {
+export class DataService {
     
     headers: Headers;
     options: RequestOptions;

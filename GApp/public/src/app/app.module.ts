@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
@@ -14,15 +15,16 @@ import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { WindowRef } from './services/window.service';
+//import { WindowRef } from './services/window.service';
 import { Guard } from './services/auth/guard';
 import { FirebaseService } from './services/firebase.service';
-import { TestService } from './services/test.service';
-import { FacebookService } from './services/fb.service';
+import { DataService } from './services/data.service';
+//import { FacebookService } from './services/fb.service';
 import { AppRoutingModule } from './app.routing.module'; 
 
 import { App } from './pages/app/app';
 import { Login } from './pages/user/login/login';
+import { Register } from './pages/user/register/register';
 import { Home } from './pages/home/home';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { About } from './pages/about/about';
@@ -47,6 +49,7 @@ export const firebaseConfig = {
     declarations: [
         App,
         Login,
+        Register,
         Home,
         Dashboard,
         About,
@@ -57,6 +60,7 @@ export const firebaseConfig = {
     imports: [
         BrowserAnimationsModule,
         CommonModule,
+        FormsModule,
         MaterialModule,
         AppRoutingModule,
         HttpModule,
@@ -71,7 +75,7 @@ export const firebaseConfig = {
         AngularFireDatabaseModule,
         AngularFireAuthModule
     ],
-    providers: [Guard, WindowRef , FirebaseService, TestService, FacebookService]
+    providers: [Guard, /*WindowRef ,*/ FirebaseService, DataService /*, FacebookService*/]
 })
 export class AppModule {
 
