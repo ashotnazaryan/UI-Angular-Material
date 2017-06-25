@@ -12,15 +12,7 @@
                     <md-icon>email</md-icon>
                     <span>{{user.email || 'Navmenu.noemail' | translate}}</span>
             </md-card-title>
-            <md-card-subtitle class="card-subtitle">
-                <md-icon>room</md-icon>
-                <span>{{user.location || 'Navmenu.nolocation' | translate}}</span>
-            </md-card-subtitle>
         </md-card-header>
-        
-        <md-card-content>
-            <p>{{user.about || 'Navmenu.noinformation' | translate}}</p>
-        </md-card-content>
          <md-card-actions>
             <button md-raised-button class="gapp-button danger full-width" [routerLink]="['/login']" (click)="sidenav.close(); logout()">
             <md-icon class="md-24">power_settings_new</md-icon>

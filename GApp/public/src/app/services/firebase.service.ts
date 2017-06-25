@@ -4,10 +4,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/fromPromise';
-import {  } from 'angularfire2/auth';
-
 @Injectable()
 export class FirebaseService {
 
@@ -16,52 +12,60 @@ export class FirebaseService {
     }
 
     loginEmailPassword(user) {
-        debugger
         return this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
-            .then((data) => {
-
+            .then((response) => {
+                localStorage.setItem('currentUser', JSON.stringify(response));
+                return response;
             })
+            .catch(function(error) {
+                return error;
+            });
     }
 
     loginWithGoogle() {
         // debugger
         return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-            .then((data) => {
-                localStorage.setItem('currentUser', JSON.stringify(data.user));
-                return data;
+            .then((response) => {
+                localStorage.setItem('currentUser', JSON.stringify(response.user));
+                return response;
+            })
+            .catch((error) => {
+                throw error;
             });
     }
 
     loginWithFacebook() {
         // debugger
         return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
-            .then((data) => {
-                localStorage.setItem('currentUser', JSON.stringify(data.user));
-                return data;
+            .then((response) => {
+                localStorage.setItem('currentUser', JSON.stringify(response.user));
+                return response;
+            })
+            .catch((error) => {
+                throw error;
             });
     }
 
     logout() {
         //debugger
         return this.afAuth.auth.signOut()
-            .then((data) => {
+            .then((response) => {
                 localStorage.removeItem('currentUser');
+            })
+            .catch((error) => {
+                throw error;
             });
     }
 
     registerUser(user) {
-        debugger
+        //debugger
         return this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
-            .then((data) => {
-
+            .then((response) => {
+                return response;
+            })
+            .catch((error) => {
+                throw error;
             });
 
     }
-
-    // getData() {
-    //     return this.http.get('assets/demo/data/charts-data.json')
-    //         .toPromise()
-    //         .then(res => res.json())
-    //         .then(data => { return data; });
-    // }
 }

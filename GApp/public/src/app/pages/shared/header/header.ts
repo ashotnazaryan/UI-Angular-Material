@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'shared-header',
   templateUrl: './header.html',
-  styleUrls: ['./header.scss']
+  styleUrls: ['./header.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
  export class Header {
@@ -30,9 +31,9 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
         switch(lang){
             case 'en':
                 return 'gb';
-            case 'ua':
+            case 'uk':
                 return 'ua';
-            case 'am':
+            case 'hy':
                 return 'am';
             default:
                 throw 'Unsupported Language';

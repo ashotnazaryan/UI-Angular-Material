@@ -10,8 +10,6 @@
     .logo {
         height: 100%;
         cursor: pointer;
-        position: absolute;
-        right: 50px;
         @media #{$mobile-portrait} {
             display: none;
         }
@@ -23,7 +21,18 @@
         color: $gappWhite;
         &.right {
             position: absolute;
-            right: 0;
+            right: 0px;
+            top: 0px;
         }
+    }
+}
+.mat-menu-panel {
+    min-width: 80px !important;
+}
+.mat-menu-item {
+    display: flex !important;
+    align-items: center;
+    .flag {
+        margin-right: 5px !important;
     }
 }

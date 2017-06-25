@@ -8,29 +8,38 @@
             </div>
         </md-toolbar>
         <md-card-content>
-            <form class="form">
+            <div class="form" role="form">
                 <md-input-container class="full-width">
-                    <input mdInput [(ngModel)]="user.email" #un="ngModel" name="un">
+                    <input mdInput [(ngModel)]="user.email" #em="ngModel" required>
                     <md-placeholder>
                         <md-icon>email</md-icon> {{"User.email" | translate}}
                     </md-placeholder>
+                    <md-hint *ngIf="!em.pristine && !user.email">
+                        <span><md-icon>error_outline</md-icon>Email is required</span>
+                    </md-hint>
                 </md-input-container>
                 <md-input-container class="full-width">
-                    <input mdInput type="password" [(ngModel)]="user.password" #pd="ngModel" name="pd">
+                    <input mdInput type="password" [(ngModel)]="user.password" #pd="ngModel" required>
                     <md-placeholder>
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
+                    <md-hint *ngIf="!pd.pristine && !user.password">                        
+                        <span><md-icon>error_outline</md-icon>Password is required</span>
+                    </md-hint>
                 </md-input-container>                
                 <div class="additional">
+                    <div *ngIf="isLoggedIn == false">
+                        <span>Wrong email or password</span>
+                    </div>
                     <a md-button class="gapp-button primary" (click)="login(user)">{{"User.login" | translate}}</a>
                     <a md-raised-button class="gapp-button success right" [routerLink]="['../register']">{{"User.signup" | translate}}</a>
                 </div>
-                <p>{{"User.loginVia" | translate}}</p>
-                <div class="additional">
-                    <a md-button class="gapp-button primary" (click)="loginFacebook()">Facebook</a>
-                    <a md-raised-button class="gapp-button danger right" (click)="loginGoogle()">Google</a>
+                <div class="additional social">
+                    <span>{{"User.loginVia" | translate}}</span>
+                    <button md-fab class="fb" (click)="loginFacebook()"></button>
+                    <button md-fab class="g" (click)="loginGoogle()"></button>
                 </div>
-            </form>
+            </div>
         </md-card-content>
     </div>
     <div *ngIf="loading" class="loading">

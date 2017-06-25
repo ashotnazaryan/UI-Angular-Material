@@ -8,25 +8,45 @@
             </div>
         </md-toolbar>
         <md-card-content>
-            <form class="form">
+            <div class="form" role="form">
                 <md-input-container class="full-width">
-                    <input mdInput [(ngModel)]="user.email" #un="ngModel" name="un">
+                    <input mdInput [(ngModel)]="user.email" #em="ngModel" name="em" required>
                     <md-placeholder>
                         <md-icon>email</md-icon> {{"User.email" | translate}}
                     </md-placeholder>
+                    <md-hint *ngIf="!em.pristine && !user.email">
+                        <span [hidden]="!em.errors?.required"><md-icon>error_outline</md-icon>Email is required</span>
+                    </md-hint>
                 </md-input-container>
                 <md-input-container class="full-width">
-                    <input mdInput type="password" mdInput [(ngModel)]="user.password" #pd="ngModel" name="pd">
+                    <input mdInput type="password" mdInput [(ngModel)]="user.password" #pd="ngModel" name="pd" required>
                     <md-placeholder>
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
+                    <md-hint *ngIf="!pd.pristine && !user.password">                        
+                        <span [hidden]="!pd.errors?.required"><md-icon>error_outline</md-icon>Password is required</span>
+                    </md-hint>
                 </md-input-container>
-                <p>{{"User.loginVia" | translate}}</p>
+                <md-input-container class="full-width">
+                    <input mdInput type="password" mdInput [(ngModel)]="user.confirmPassword" #cpd="ngModel" name="cpd" required>
+                    <md-placeholder>
+                        <md-icon>lock</md-icon> {{"User.confirmpassword" | translate}}
+                    </md-placeholder>
+                    <md-hint *ngIf="user.confirmPassword != user.password">
+                        <span><md-icon>error_outline</md-icon>Passwords don't match</span>
+                    </md-hint>
+                </md-input-container>
                 <div class="additional">
-                    <a md-button class="gapp-button warning" [routerLink]="['../login']">{{"User.cancel" | translate}}</a>
+                    <div *ngIf="isRegistered == false">
+                        <span>Wrong email or password</span>
+                    </div>
+                    <a md-button class="gapp-button default" [routerLink]="['../login']">{{"User.cancel" | translate}}</a>
                     <a md-raised-button class="gapp-button success right" (click)="register(user)">{{"User.signup" | translate}}</a>
                 </div>
-            </form>
+            </div>
         </md-card-content>
+    </div>
+     <div *ngIf="loading" class="loading">
+        <md-spinner></md-spinner>
     </div>
 </div>

@@ -16,13 +16,9 @@
             background-color: $gappPrimary;
             color: $gappWhite;
             position: relative;
-            min-height: initial;
-            height: inherit;
             .logo {
                 height: 50%;
-                margin: 0;
-                position: absolute;
-                right: 16px;
+                margin-left: 10px;
                 img {
                     height: 100%;
                 }
@@ -32,20 +28,34 @@
             }
         }
         &.loading {
-            position: absolute;
             background-color: $gappWhite;
             opacity: 0.4;
         }
     }
     .form {
-        margin: 30px 0 20px 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
         padding: 0 20px;
+        .mat-input-wrapper {
+            margin: 0.5em 0;
+        }
+        .mat-hint span {
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+            .material-icons {
+                font-size: 1.2em;
+            }
+        }   
     }
     .additional {
         margin-top: 15px;
     }
     .full-width {
         width: 100%;
+    }
+    .loading {
+        @extend .center;
     }
 }
 
