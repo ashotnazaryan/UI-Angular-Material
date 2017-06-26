@@ -14,8 +14,12 @@
             </md-card-title>
         </md-card-header>
          <md-card-actions>
+             <button md-raised-button class="gapp-button primary full-width" [routerLink]="['./profile']" (click)="sidenav.close()">
+                <md-icon class="md-24">face</md-icon>
+                {{"User.profile" | translate}}
+            </button>
             <button md-raised-button class="gapp-button danger full-width" [routerLink]="['/login']" (click)="sidenav.close(); logout()">
-            <md-icon class="md-24">power_settings_new</md-icon>
+                <md-icon class="md-24">power_settings_new</md-icon>
                 {{"User.logout" | translate}}
             </button>
         </md-card-actions>

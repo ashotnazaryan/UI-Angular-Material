@@ -28,6 +28,7 @@ import { Register } from './pages/user/register/register';
 import { Home } from './pages/home/home';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { About } from './pages/about/about';
+import { Profile } from './pages/profile/profile';
 import { Navmenu } from './pages/shared/navmenu/navmenu';
 import { Header } from './pages/shared/header/header';
 import { Footer } from './pages/shared/footer/footer';
@@ -53,6 +54,7 @@ export const firebaseConfig = {
         Home,
         Dashboard,
         About,
+        Profile,
         Navmenu,
         Header,
         Footer

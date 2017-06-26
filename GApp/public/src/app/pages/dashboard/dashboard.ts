@@ -13,7 +13,7 @@ export class Dashboard implements OnInit {
     errorMessage: any;
     loading: boolean = false;
     
-    constructor(private http: Http, private ts: DataService) {
+    constructor(private http: Http, private dataservice: DataService) {
        
     }
 
@@ -26,7 +26,7 @@ export class Dashboard implements OnInit {
         let url = 'https://gapp-def88.herokuapp.com/api/dashboard';
         let params = {};
         this.loading = true;
-        this.ts.getData(url, params)
+        this.dataservice.getData(url, params)
             .subscribe(
                 data => {
                     this.loading = false;

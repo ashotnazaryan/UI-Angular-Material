@@ -32,6 +32,7 @@
         "lastname": "Last Name",
         "cancel": "Cancel",
         "forgot": "Forgot Password ?",
-        "signup": "Sign Up"
+        "signup": "Sign Up",
+        "profile": "Profile"
     }
 }

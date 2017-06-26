@@ -10,7 +10,7 @@
         <md-card-content>
             <div class="form" role="form">
                 <md-input-container class="full-width">
-                    <input mdInput [(ngModel)]="user.email" #em="ngModel" required>
+                    <input mdInput [(ngModel)]="user.email" #em="ngModel" autocomplete="off" value="" required>
                     <md-placeholder>
                         <md-icon>email</md-icon> {{"User.email" | translate}}
                     </md-placeholder>
@@ -19,7 +19,7 @@
                     </md-hint>
                 </md-input-container>
                 <md-input-container class="full-width">
-                    <input mdInput type="password" [(ngModel)]="user.password" #pd="ngModel" required>
+                    <input mdInput type="password" [(ngModel)]="user.password" #pd="ngModel" value="" autocomplete="off" required>
                     <md-placeholder>
                         <md-icon>lock</md-icon> {{"User.password" | translate}}
                     </md-placeholder>
@@ -31,8 +31,8 @@
                     <div *ngIf="isLoggedIn == false">
                         <span>Wrong email or password</span>
                     </div>
-                    <a md-button class="gapp-button primary" (click)="login(user)">{{"User.login" | translate}}</a>
-                    <a md-raised-button class="gapp-button success right" [routerLink]="['../register']">{{"User.signup" | translate}}</a>
+                    <button md-button class="gapp-button primary" (click)="login(user)" [disabled]="!user.email || !user.password">{{"User.login" | translate}}</button>
+                    <button md-raised-button class="gapp-button success right" [routerLink]="['../register']">{{"User.signup" | translate}}</button>
                 </div>
                 <div class="additional social">
                     <span>{{"User.loginVia" | translate}}</span>
