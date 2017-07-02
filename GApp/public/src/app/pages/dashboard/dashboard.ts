@@ -9,7 +9,7 @@ import { DataService } from '../../services/data.service';
 
 export class Dashboard implements OnInit {
 
-    dashboard: any = {};
+    posts: any[] = [];
     errorMessage: any;
     loading: boolean = false;
     
@@ -18,22 +18,39 @@ export class Dashboard implements OnInit {
     }
 
     ngOnInit() {
-        this.getDashboardData();
+        this.getPosts();
     }
 
-    getDashboardData() {
-        //https://gapp-def88.herokuapp.com/api/dashboard   http://localhost:5000/api/dashboard
-        let url = 'https://gapp-def88.herokuapp.com/api/dashboard';
+    getPosts() {
+        //https://gapp-def88.herokuapp.com/api/getPosts   http://localhost:5000/api/getPosts
+        let url = 'http://localhost:5000/api/getPosts';
         let params = {};
         this.loading = true;
         this.dataservice.getData(url, params)
             .subscribe(
                 data => {
                     this.loading = false;
-                    this.dashboard = data.data; 
+                    this.posts = data.posts; 
                 },
                 error =>  {
                     this.loading = true;
+                    this.errorMessage = <any>error;
+                });
+    }
+
+    setPost(model) {
+        debugger
+        let url = 'http://localhost:5000/api/setPost';
+        let params = {post: model};
+        this.loading = true;
+        this.dataservice.getData(url, params)
+            .subscribe(
+                data => {
+                    this.loading = false;
+                    //this.posts = data.posts; 
+                },
+                error =>  {
+                    this.loading = false;
                     this.errorMessage = <any>error;
                 });
     }

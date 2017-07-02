@@ -1,2 +1,9 @@
-<div>{{dashboard.name}}</div>
+<div *ngFor="let post of posts">
+    <h2>{{post?.title}}</h2>
+    <md-input-container>
+        <input mdInput type="text" [(ngModel)]="post.model">
+        <md-placeholder>Write a post..</md-placeholder>
+    </md-input-container>
+    <button md-button class="gapp-button primary" (click)="setPost(post.model)">Add</button>
+</div>
 <md-spinner *ngIf="loading" class="center"></md-spinner>
